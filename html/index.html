@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
   <head>
     <meta charset="utf-8" />
@@ -9,24 +8,80 @@
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="/styles.css?v=1.0" />
-  </head>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: hsl(250, 24%, 9%);
+        color: hsl(0, 0%, 100%);
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+      }
 
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+      }
+
+      h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 1rem 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .logo {
+        width: 120px;
+        height: auto;
+        margin-bottom: 1.5rem;
+        animation: fadeIn 1.2s ease-in-out;
+      }
+
+      .construction-text {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        background: linear-gradient(90deg, hsl(0, 80%, 60%), hsl(40, 80%, 60%));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        animation: pulse 1.5s infinite alternate;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes pulse {
+        from { opacity: 0.7; }
+        to { opacity: 1; }
+      }
+    </style>
+  </head>
   <body>
     <main>
-      <img
-        src="https://i.ibb.co/wFLYbMxr/caronte-blanco.png"
-        alt="CARONTE logo"
-        class="logo"
-      />
-
-      <h1>CARONTE</h1>
-
-      <p>
-        🚧🚧 ¡Esta página web está en construcción! 🚧🚧
-      </p>
+      <div class="container">
+        <img
+          src="https://i.ibb.co/wFLYbMxr/caronte-blanco.png"
+          alt="CARONTE logo"
+          class="logo"
+        />
+        <p class="construction-text">🚧🚧 ¡Esta página web está en construcción! 🚧🚧</p>
+        <p class="construction-text">admin@caronte.site</p>
+      </div>
     </main>
-
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
